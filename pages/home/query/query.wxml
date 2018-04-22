@@ -1,0 +1,17 @@
+<view id="queryContainer">
+  <view class="container">
+    <image src="/images/logo.png" class="headimg" mode='aspectFit'></image>
+    <text>录取通知系统</text>
+    <form bindsubmit='formSubmit'>
+      <view class="form-group">
+        <text>姓名：</text>
+        <input type='text' class="form-control" placeholder="姓名" name="name"></input>
+      </view>
+      <view class="form-group">
+        <text>考生号：</text>
+        <input type='text' class="form-control" placeholder="考生号" name="studentId"></input>
+      </view>
+      <button formType="submit" type='primary'>查询</button>
+    </form>
+  </view>
+</view>

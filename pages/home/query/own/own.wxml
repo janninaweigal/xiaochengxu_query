@@ -1,0 +1,17 @@
+<view id="ownInfo">
+  <view class="{{data!=null?'containter':'nonecontent'}}">
+    <text class="{{data.success==1?'successTitle':'errorTitle'}}">{{data.success?'恭喜你,你被录取了':'不好意思,你落榜了'}}</text>
+    <image src="{{data.imgSrc?data.imgSrc:'/images/jannine.jpg'}}" alt="图片无法加载"></image>
+    <view class="content">
+       <text>姓名：<text class="strong">{{data.name}}</text></text>
+       <text>学号：<text class="strong">{{data.studentId}}</text></text>
+       <text>分数：<text class="strong">{{data.score}}</text></text>
+       <text>电话号码：<text class="strong">{{data.phone}}</text></text>
+       <text>学校：<text class="strong">{{data.school}}</text></text>
+       <text>地址：<text class="strong">{{data.address}}</text></text>
+    </view>
+  </view>
+  <view class="{{data==null?'containter':'nonecontent'}}">
+      没有查到数据
+  </view>
+</view>

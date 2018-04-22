@@ -1,0 +1,28 @@
+<view id="home">
+  <view class="container">
+    <view class="header">
+      <view>
+        <image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/images/own.png'}}" class="userimg"></image>
+        <text class="username">Hi{{hasUserInfo ? ', ' + userInfo.nickName : ', 你好~'}}</text>
+      </view>
+      <text>{{userInfo.gender?'男':'女'}},已经准备好了呦~</text>
+    </view>
+
+    <swiper indicator-dots="true" autoplay="true" interval="3000" class="swiper-container">
+      <block>
+        <swiper-item style="height:500px;" wx:for="{{sliderDatas}}" wx:key="index">
+          <image src="{{item.src}}" class="slide-img"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="module-container">
+      <view class="box-wrapper" wx:for="{{moudles}}" wx:key="index">
+        <navigator url="{{item.url}}" class="servicebox">
+            <image src="{{item.src}}" class="box-img"/>
+            <text style='font-size: 30rpx;'>{{item.text}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
